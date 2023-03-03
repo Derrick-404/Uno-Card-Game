@@ -38,6 +38,7 @@
     | EIGHT |
     | NINE |
     | DRAW_TWO |
+    | DRAW_FOUR |           
     | REVERSE |
     | SKIP |
     +-------+
