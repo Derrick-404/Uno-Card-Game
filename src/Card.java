@@ -8,7 +8,7 @@
  */
 class Card {
     public enum Rank {
-        ZERO, ONE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, DRAW_TWO, REVERSE, SKIP
+        ZERO, ONE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, DRAW_TWO, DRAW_FOUR, REVERSE, SKIP
     }
 
     public enum Suit {
