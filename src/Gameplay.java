@@ -6,6 +6,9 @@ import java.util.ArrayList;
  * The Gameplay class is the entry point to our game.
  *
  * @author Derrick-404
+ * @author Akaaash101
+ * @author Ahmedbattal
+ * @author Dhairya167
  */
 
 public class Gameplay {

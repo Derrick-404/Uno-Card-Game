@@ -3,6 +3,9 @@
  * to set up the game by generating a deck and the player's hand
  *
  * @author Derrick-404
+ * @author Akaaash101
+ * @author Ahmedbattal
+ * @author Dhairya167
  */
 
 import java.util.ArrayList;

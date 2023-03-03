@@ -2,6 +2,9 @@
  * The Card class creates a card.
  *
  * @author Derrick-404
+ * @author Akaaash101
+ * @author Ahmedbattal
+ * @author Dhairya167
  */
 class Card {
     public enum Rank {
