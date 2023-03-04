@@ -13,9 +13,9 @@ import java.util.Random;
 
 public class GenerateHand {
     public static void populateDeck(ArrayList<Card> deck) {
-        for (Card.Suit suit : Card.Suit.values()) {
-            for (Card.Rank rank : Card.Rank.values()) {
-                deck.add(new Card(rank, suit));
+        for (Card.Color color : Card.Color.values()) {
+            for (Card.Value value : Card.Value.values()) {
+                deck.add(new Card(value, color));
             }
         }
     }
