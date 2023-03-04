@@ -29,4 +29,5 @@
     | DRAW_FOUR|  
     | REVERSE |
     |  SKIP  |
+    | WILD_CARD | 
     +--------+
