@@ -1,5 +1,43 @@
-public void testUno() {
-    UnoGame game = new UnoGame();
-    game.playCard(new Card(Color.RED, Value.ONE));
-    assertEquals(game.getCurrentPlayer().getHand().size(), 6);
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class TestUnoGame {
+
+    @Test
+    public void testPlayCard() {
+        UnoGame game = new UnoGame();
+        game.addPlayer(new Player());
+        game.addPlayer(new Player());
+        game.startGame();
+        Player currentPlayer = game.getCurrentPlayer();
+        Card topCard = game.getTopCard();
+        int initialHandSize = currentPlayer.getHandSize();
+        Card cardToPlay = currentPlayer.getPlayableCards(topCard).get(0);
+        game.playCard(currentPlayer, cardToPlay);
+        assertEquals(currentPlayer.getHandSize(), initialHandSize - 1);
+        assertEquals(game.getTopCard(), cardToPlay);
+    }
+
+    @Test
+    public void testDrawCard() {
+        UnoGame game = new UnoGame();
+        game.addPlayer(new Player());
+        game.addPlayer(new Player());
+        game.startGame();
+        Player currentPlayer = game.getCurrentPlayer();
+        int initialHandSize = currentPlayer.getHandSize();
+        game.drawCard(currentPlayer);
+        assertEquals(currentPlayer.getHandSize(), initialHandSize + 1);
+    }
+
+    @Test
+    public void testReverse() {
+        UnoGame game = new UnoGame();
+        game.addPlayer(new Player());
+        game.addPlayer(new Player());
+        game.startGame();
+        Player currentPlayer = game.getCurrentPlayer();
+        game.reverse();
+        assertEquals(game.getNextPlayer(), currentPlayer);
+    }
 }
