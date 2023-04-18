@@ -32,6 +32,9 @@ class Deck {
             for (Card.Value value : Card.Value.values()) {
                 if (value != Card.Value.WILD_DRAW_FOUR && value != Card.Value.WILD_CHANGE_COLOR) {
                     cards.add(new Card(value, color));
+                    if (value != Card.Value.ZERO) {
+                        cards.add(new Card(value, color));
+                    }
                 }
             }
         }
@@ -52,16 +55,23 @@ class Deck {
     /**
      * Draws a card from the deck, and removes
      * it from the deck.
-     * @return The drawn card, or null if the deck is empty
+     * @return
      */
     public Card drawCard() {
         if (cards.isEmpty()) {
-            System.out.println("The deck is empty. No more cards to draw.");
-            return null;
+            throw new IllegalStateException("The deck is empty. No more cards to draw.");
         } else {
             Card drawnCard = cards.get(0);
             cards.remove(0);
             return drawnCard;
         }
+    }
+
+    /**
+     * Returns the number of cards remaining in the deck.
+     * @return
+     */
+    public int size() {
+        return cards.size();
     }
 }

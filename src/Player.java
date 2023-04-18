@@ -91,5 +91,4 @@ class Player {
     public void removeCardFromHand(Card card) {
         hand.remove(card);
     }
-
 }

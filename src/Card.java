@@ -24,22 +24,28 @@ class Card {
     public enum Color {
         RED, YELLOW, GREEN, BLUE
     }
+
     private Value value;
     private Color color;
 
     /**
      * Creates a Card with the
      * specified value and color
+     *
      * @param value
      * @param color
      */
     public Card(Value value, Color color) {
+        if (value == null) {
+            throw new IllegalArgumentException("Value cannot be null.");
+        }
         this.value = value;
         this.color = color;
     }
 
     /**
      * Gets the value of the card
+     *
      * @return
      */
     public Value getValue() {
@@ -48,6 +54,7 @@ class Card {
 
     /**
      * Gets the color of the card
+     *
      * @return
      */
     public Color getColor() {
@@ -57,6 +64,7 @@ class Card {
     /**
      * Returns a string representation
      * of the card.
+     *
      * @return
      */
     public String toString() {
